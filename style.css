@@ -5,7 +5,9 @@
     text-decoration: none;
     color:white;
     font-family:sans-serif;
+    caret-color:transparent;
 }
+
 .wrapper{
     width: 100vw;
     height: 100vh;
