@@ -1,0 +1,546 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:white;
+    font-family:sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+.main-section{
+    background: radial-gradient(rgb(56, 56, 56), black);
+}
+.navbar, .hero-section, .models, hr{
+    width: 87%;
+    margin: 0 auto;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+.logo-links-section{
+    display: flex;
+}
+.navbar .logo-section{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.navbar .logo{
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
+.navbar .icon{
+    height: 25px;
+    width: 25px;
+}
+.profile-section{
+    display: flex;
+    gap: 1.5rem;
+}
+/* hr{
+    margin-top: 0.5rem;
+} */
+.hero-section{
+    position: relative;
+    height: 620px;
+}
+.model-hover{
+    height: 400px;
+    width: 200px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 10px;
+    position: absolute;
+    top: 88px;
+    left: 6.5%;
+    visibility: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.content{
+    color: black;
+}
+.model-container{
+    margin-top: 25px;
+    height: 45px;
+}
+.model-container:hover .model-hover{
+    visibility: visible;
+    opacity:100%;
+}
+.model-container:hover ~ .grill-image{
+    visibility: hidden;
+}
+.grill-image{
+    position: absolute;
+    top: 4%;
+    left: 35%;
+    animation: scale 4s 1 alternate;
+    transform: scale(1.5);
+}
+.first-model-text, .second-model-text, .third-model-text{
+    color: white;
+    font-size: 1.2rem;
+    font-weight:bold;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0 3px;
+    transition: all 0.25s linear 1;
+}
+.first-model-text:hover, .second-model-text:hover, .third-model-text:hover{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.model-cars{
+    position: absolute;
+    left: 300px;
+    top: -50px;
+    height: 600px;
+    width: 1000px;
+    transform: scale(0);
+    transition: all 0.75s linear ;
+}
+.first-model-text:hover ~ .model-car1{
+    transform: scale(1);
+    transform-origin: right;
+}
+.second-model-text:hover ~ .model-car2{
+    transform: scale(1);
+    transform-origin: left;
+}
+.third-model-text:hover ~ .model-car3{
+    transform: scale(1);
+    transform-origin: right;
+}
+.model-hover
+.hero-text{
+    height: 100%;
+}
+.hero-text .the{
+    padding-top: 15rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.5rem;
+    font-weight: 100;
+}
+.hero-text .five{
+    font-size: 13rem;
+    margin:-1rem 0 -1rem 1rem;
+
+}
+.hero-text .long-wheelbase{
+    font-size: 1.8rem;
+    font-weight: 10;
+}
+.hero-text .price{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem;
+}
+.phone-icon{
+    border: 1px solid white;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 92%;
+    top: 60%;
+}
+.phone-icon img{
+    height: 30px;
+    width: 30px;
+}
+
+.models{
+    height: auto;
+    width: 100%;
+    background-color: white;
+}
+.models .model-text{
+    color: black;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 3.5rem;
+    font-weight: 100;
+}
+.choise-section img{
+    height: 100px;
+    width: 160px;
+}
+.choise-section{
+    display: flex;
+    width: 70%;
+    margin: 2.5rem auto;
+    justify-content: space-between;
+}.new-car-text, .search-now{
+    color: black;
+    margin-top: 1.5rem;
+}
+.new-car-text{
+    font-size: 1.8rem;
+    opacity: 0.8;
+}
+.search-now{
+    border:3px solid black;
+    padding:1rem 2rem;
+}
+.search-now:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+.new-car, .test-drive, .build-own{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bmwIx{
+    height: 500px;
+    background: url(./Assets/img01.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    position: relative;
+    z-index: 2;
+}
+.bmwIx-text-section::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /* background: linear-gradient(to right, black, rgb(52, 52, 52), rgb(103, 103, 103), rgb(155, 153, 153), rgb(205, 201, 201), rgb(255, 255, 255)); */
+    height: 500px;
+    width: 40%;
+    z-index: 4;
+}
+.bmwIx-text-section{
+    padding: 10rem 0 0 7rem;
+    margin-top: 2rem;
+}
+.bmwIx-main-text{
+    font-size: 2.5rem;
+    font-weight: 100;
+}
+.bmwIx-text{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+.discover{
+    margin-top: 1rem;
+    border: 2px solid white;
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+.The7{
+    height: 500px;
+    background: url(./Assets/img02.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+}
+.The7 .The7-text-section{
+    padding: 18rem 0 0 7rem;
+    margin-top: 2rem;
+}
+.Thexi{
+    height: 500px;
+    background: url(./Assets/img03.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+}
+.Thexi .bmwIx-text{
+    width: 600px;
+    line-height: 2rem;
+}
+.Thexi .Thexi-text-section{
+    padding: 18rem 0 0 7rem;
+    margin-top: 2rem;
+}
+.special-offer{
+    display:flex;
+    height: 600px;
+}
+.special-offer .offer-image{
+    width: 850px;
+    height: 530px;
+    padding: 3rem 0 2rem 5rem;
+}
+.offer-text-section{
+    padding: 10rem 0rem 0rem 4rem;
+}
+.offer-text, .emi-text, .emi2-text, .know-more a, .arrow{
+    color: black;
+}
+.offer-text{
+    font-size: 2rem;
+    font-weight: 100;
+}
+.emi-text, .emi2-text{
+    width: 500px;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.know-more{
+    margin-top: 1.2rem;
+    font-weight: 600;
+    width: 100px;
+}
+.know-more:hover a{
+    color: rgb(92, 92, 247);
+}
+.horizontal-rule{
+    width: 100%;
+}
+.all-models{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+    gap: 2rem;
+}
+.all-models div{
+    color: black;
+}
+.find-bmw-text{
+    font-size: 0.9rem;
+}
+.all-model-text{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.all-model-text:hover{
+    cursor: pointer;
+    color: rgb(92, 92, 247);
+}
+
+.footer{
+    height: 500px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+.footer-link{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-top: 4rem;
+}
+.footer-links{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.footer-links .head{
+    font-size: 0.8rem;
+}
+.footer-links a{
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+.footer-links a:hover{
+    opacity: 1;
+}
+.footer-links a, .footer-links .head{
+    color: black;
+}
+
+.footer-icons{
+    display: flex;
+    width: 90%;
+    margin: 5rem auto;
+    gap: 1.5rem;
+}
+.horizontal-rule-footer{
+    width: 90%;
+}
+.copyright-text{
+    color: black;
+}
+.copyrigth{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+.copyrigth .right-part{
+    display: flex;
+    gap: 2rem;
+}
+
+@media (max-width : 1284px) {
+    .navbar .logo-section{
+        opacity: 0;
+    }
+    .hero-section{
+        height: 900px;
+    }
+    .grill-image{
+        position: absolute;
+        top: 10%;
+        left: 25%;
+    }
+    .hero-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 5%;
+        left: 40%;
+    }
+}
+@media (max-width:1024px) {
+    .grill-image{
+        position: absolute;
+        top: 10%;
+        left: 15%;
+        transform: scale(1.3);
+    }
+    .hero-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 5%;
+        left: 30%;
+    }
+    .choise-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .bmwIx-text-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20rem;
+    }
+    .The7-text-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Thexi-text-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .special-offer{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 800px;
+    }
+    .offer-text-section{
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .know-more{
+        border: 1px solid black;
+        padding:0.5rem 1rem;
+        width: 200px;
+        text-align: center;
+    }
+    
+    
+}
+@media (max-width:768px) {
+    .grill-image{
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        transform: scale(0.8);
+    }
+    .hero-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        top: 5%;
+        left: 25%;
+    }
+    .special-offer .offer-image{
+        padding: 0px;
+        width: 800px;
+        height: 500px;
+        margin-top: 2rem;
+    }
+    .footer{
+        height: auto;
+    }
+    .footer-link{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .legal-class{
+        margin-left: -6rem;
+    }
+    .footer-icons{
+        display:flex;
+        justify-content: center;
+    }
+    .copyrigth{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+        align-items: center;
+    }
+}
+
+@keyframes scale {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+/* @keyframes move {
+    0%{
+        transform:rotate(20deg);
+    }
+    25%{
+        transform: translateX(-40px) rotate(40deg);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+    75%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+} */
